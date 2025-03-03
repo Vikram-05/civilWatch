@@ -1,0 +1,613 @@
+.main_user_con{
+    max-width: 1500px;
+    margin: auto;
+    padding: 10px;
+}
+
+.item_con{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    & .slide_con{
+        width: 100%;
+        height: 250px;
+        /* border: 2px solid; */
+        /* border: 3px solid red; */
+
+    }
+}
+.edit_profile{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 4px 20px ;
+    background-color: rgba(67, 5, 155, 0.164);
+    color: rgba(68, 5, 155, 0.888);
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+   
+    
+    &:hover::after{
+        bottom: 0%;
+    }
+    &::after{
+        content: "Edit Profile";
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: all ease 0.28s;
+        background-color: #fff;
+        color: rgba(68, 5, 155, 0.888);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.slide_con{
+    
+    & .icon_con{
+        /* border: 12px solid blue; */
+        font-size: 25px;
+        width: 50px;
+        aspect-ratio: 1;
+        padding: 0;
+        & .profile{
+            width: 100%;
+            height: 100%;
+        }
+    
+        
+    }
+    & .name_user{
+        font-size: 18px;
+    }
+    & .date_user{
+        font-size: 12px;
+        font-weight: 450;
+        color: rgb(69, 68, 68);
+    }
+    & .email_user{
+        color: rgba(41, 39, 39, 0.816);
+        margin-top: -10px;
+        font-weight: 450;
+        font-size: 12px;
+    }
+    & .resolved_status{
+        margin: 0;
+        padding: 0;
+    }
+}
+.title_con{
+    margin-top: 0 !important;
+}
+
+.Report_new{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 4px 20px ;
+    color: #fff;
+    background-color: rgba(68, 5, 155, 0.888);
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    &:hover::after{
+        bottom: 0%;
+    }
+    &::after{
+        content: "Report New";
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: all ease 0.28s;
+        background-color: #fff;
+        color: rgba(68, 5, 155, 0.888);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.active_issue_con{
+    /* border: 2px solid; */
+
+    & h4{
+        text-transform: capitalize;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 20px 0;
+    }
+}
+
+.issue_con{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.329);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 9px 20px;
+    border-radius: 7px;
+    overflow: hidden;
+    margin-top: 5px;
+    &:hover{
+        background-color: #eee9e971;
+    }
+    &:hover> .delete{
+        color: rgb(50, 10, 153);
+        scale: 1.08;
+    }
+    
+
+    & .issue_name{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 20px;
+        /* width: 20%; */
+        /* border: 2px solid black; */
+
+        & .logo{
+            font-size: 18px;
+        }
+
+        & p{
+            font-size: 15px;
+            font-weight: 450;
+            letter-spacing: -0.5px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+            color: #000000db;
+            /* border: 2px solid   red; */
+            transition: all ease 0.2s;
+        }
+    }
+    & span{
+        /* width: 20%; */
+        color: #000000ad;
+        font-size: 13.5px;
+        transition: all ease 0.2s;
+        /* border: 2px solid   red; */
+    }
+    & .priority{
+        /* width: 20%; */
+        text-transform: capitalize;
+        transition: all ease 0.2s;
+        /* border: 2px solid   red; */
+        
+    }
+    & .status{
+        /* width: 20%; */
+        text-transform: capitalize;
+        transition: all ease 0.2s;
+        /* border: 2px solid   red; */
+        
+    }
+    & .days{
+        /* width: 20%; */
+        transition: all ease 0.2s;
+        /* border: 2px solid   red; */
+        
+    }
+    & .delete{
+        /* border: 2px solid   red; */
+        font-size: 30px;
+        cursor: pointer;
+        padding: 6px;
+        transition: all ease 0.28s;
+        border-radius: 50%;
+        &:hover{
+            animation: anime_delete 0.4s linear  ;
+            border: 1px solid #3e0980;
+        }
+
+    }
+    & .done_icon{
+        /* border: 2px solid red; */
+        font-size: 20px;
+        margin-left: 80px;
+        margin-right: 10px;
+    }
+
+}
+@keyframes anime_delete {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(20deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.close_btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 30px;
+    background-color: #4821ab4d;
+    color: #3e0980;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    &:hover{
+        background-color: #3e0980;
+        color: #fff;
+    }
+}
+.profile_con{
+    height: 180px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    /* border: 2px solid red; */
+
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+}
+.edit_profile_user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+}
+.comm_inp{
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    & p{
+        font-size: 15px;
+        font-weight: 450;
+        
+    }
+    & input{
+        height: 40px;
+        width: 100%;
+        border-radius: 7px;
+        border: none;
+        outline: none;
+        padding: 5px 10px;
+        background-color: #ded5d54d;
+        color: #000000ad;
+    }
+
+}
+
+
+/* ///////////////////////////animation/////////// */
+.right{
+    animation: rightAnimation 0.5s ease-in ;
+}
+.left{
+    animation: leftAnimation 0.5s ease-in ;
+}
+@keyframes rightAnimation {
+    0%{
+        transform: translateX(60px);
+        opacity: 0;
+    }
+    100%{   
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes leftAnimation {
+    0%{
+        transform: translateX(-60px);
+        opacity: 0;
+    }
+    100%{   
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.give_review{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 4px 20px ;
+    color: #fff;
+    background-color: rgba(68, 5, 155, 0.888);
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    &:hover::after{
+        bottom: 0%;
+    }
+    &::after{
+        content: "Give Review";
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: all ease 0.28s;
+        background-color: #fff;
+        color: rgba(68, 5, 155, 0.888);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+/* review container */
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Input Fields */
+input[type="number"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+/* Button Styles */
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+    gap: 10px;
+}
+.solved_active{
+    background-color: rgba(67, 5, 155, 0.782) !important;
+    color: #fff !important;
+}
+
+
+
+.buttons .solved {
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 5px 20px ;
+    color: rgba(68, 5, 155, 0.888);
+    background-color:  rgba(114, 57, 194, 0.281);
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 48%;
+}
+
+
+.buttons .unsolved {
+    width: 48%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 4px 20px ;
+    color: rgba(68, 5, 155, 0.888);
+    background-color:  rgba(114, 57, 194, 0.281);
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+.status-text {
+    font-size: 13px;
+    color: #777;
+}
+
+.submit-btn {
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 8px 20px ;
+    color: #fff;
+    background-color: rgba(67, 5, 155, 0.782);
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    &:hover::after{
+        bottom: 0%;
+    }
+    &::after{
+        content: "Submit";
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: all ease 0.28s;
+        background-color: #fff;
+        color: rgba(68, 5, 155, 0.888);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .buttons button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+    .item_con{
+        flex-direction: column !important;
+    }
+}
+
+@media (width<800px) {
+    body{
+        /* background-color: rebeccapurple; */
+    }
+    .title_isue{
+        font-size: 13px !important;
+    }
+    .pri{
+        font-size: 12px !important;
+    }
+    &.issue_name{
+        width: 70% !important;
+    }
+    & .days{
+        /* width: 15% !important; */
+        font-size: 11px !important;
+    }
+    .give_review{
+        padding: 4px 10px ;
+        font-weight: 450;
+        font-size: 11px;
+        &::after{
+            font-size: 11px;
+        }
+    }
+    
+}
+@media (width<450px) {
+    body{
+        /* background-color: rebeccapurple; */
+    }
+    .issue_con{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .title_isue{
+        font-size: 11px !important;
+    }
+    .pri{
+        font-size: 10px !important;
+    }
+    &.issue_name{
+        width: 70% !important;
+    }
+    & .days{
+        /* width: 15% !important; */
+        font-size: 10px !important;
+        /* display: none; */
+    }
+    .give_review{
+        padding: 4px 9px ;
+        font-weight: 450;
+        font-size: 11px;
+        &::after{
+            font-size: 11px;
+        }
+    }
+    .slide_con{
+        height: auto;
+        & .icon_con{
+            font-size: 22px;
+            width: 50px;
+            aspect-ratio: 1;
+            padding: 0;
+            & .profile{
+                width: 100%;
+                height: 100%;
+            }
+        
+            
+        }
+        & .name_user{
+            font-size: 16px;
+        }
+        & .date_user{
+            font-size: 11px;
+            font-weight: 450;
+            color: rgb(69, 68, 68);
+        }
+        & .email_user{
+            color: rgba(41, 39, 39, 0.816);
+            margin-top: -10px;
+            font-weight: 450;
+            font-size: 11px;
+        }
+        & .resolved_status{
+        }
+    }
+    .edit_profile{
+
+        font-size: 12px;
+        &::after{
+            font-size: 12px;
+        }
+    }
+    .Report_new{
+        font-size: 12px;
+        &::after{
+            font-size: 12px;
+        }
+    }
+    
+}

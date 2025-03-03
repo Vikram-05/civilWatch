@@ -1,0 +1,18 @@
+.report{
+    margin-top: 20px;
+}
+.swiper_work{
+    animation: h4Animation 0.6s ease-in;
+}
+
+@keyframes successAnimation {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }

@@ -1,0 +1,131 @@
+.search{
+    /* border: 1px solid red; */
+    height: 40px;
+    margin: 10px 0px;
+    background-color: #eee9e971;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    animation: searchAnimation 0.5s ease-in-out;
+
+    & input{
+        border: none;
+        outline: none;
+        width: 95%;
+        height: 100%;
+        padding: 5px 20px;
+        background-color: transparent;
+    }
+    & .search_icon{
+        width: 5%;
+        height: 50%;
+        cursor: pointer;
+    }
+}
+.search-results{
+    /* border: 2px solid red; */
+    max-height: 300px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+}
+
+
+.result-item{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.263);
+    height: 50px;
+    display: flex;
+    align-items: start !important;
+    justify-content: space-between;
+    margin: 5px 10px;
+    cursor: pointer;
+    border-radius: 7px ;
+    overflow: hidden;
+    transition: all ease 0.28s;
+    &:hover{
+        background-color: #eee9e971;
+    }
+
+    & .avtar_con{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 15px;
+        /* border: 2px solid red; */
+        width: 30%;
+        margin-left: 40px;
+
+        & .rep_name{
+            font-weight: 450;
+            font-size: 14px;
+            text-transform: capitalize;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    & .search_loc{
+        font-weight: 400;
+            font-size: 13px;
+            text-transform: capitalize;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            margin-right: 20px;
+            /* border: 2px solid red; */
+            width: 20%;
+    }
+}
+.msg{
+    width: 100%;
+    /* border: 2px solid red; */
+    font-size: 14px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(113, 104, 104);
+}
+
+@keyframes searchAnimation {
+    0%{
+        scale: 0.5;
+        opacity: 0;
+    }
+    100%{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+
+@media (width<850px) {
+    .result-item{
+        /* background-color: red !important; */
+    }
+    .hide{
+        display: none !important;
+    }
+    .avtar_con{
+        width: 60% !important;
+        margin-left: 20px !important;
+    }
+}
+@media (width<412px) {
+    .avtar_con{
+        margin-left: 5px !important;
+        gap: 7px !important;
+        & .rep_name{
+            font-size: 12px !important;
+        }
+    }
+}
